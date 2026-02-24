@@ -18,7 +18,8 @@ col_width = max_len + 2  # 加一些间距
 
 cols = 5  # 每行显示5列
 for i, func in enumerate(sorted(builtin_funcs), start=1):
-    print(func.ljust(col_width), end="")
+    # print(func.ljust(col_width), end="")
+    print(f"{func:<{col_width}}", end="")  # < 表示左对齐
     if i % cols == 0:
         print()
 print()
