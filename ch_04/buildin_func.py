@@ -1,4 +1,4 @@
 s = "hello world"
-print(max(s))
-print(min(s))
+print(repr(max(s)))
+print(repr(min(s)))
 print(len(s))
