@@ -8,5 +8,10 @@ print(5**2)
 first, second = 10, 15
 print(first + second)
 
+# 字符串拼接
 first, second = "10", "15"
 print(first + second)
+
+# 字符串重复
+first, second = "Test ", 3
+print(first * second)
