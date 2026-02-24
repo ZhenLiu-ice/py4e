@@ -1,7 +1,8 @@
-counts = {}
+file_path = "./book.txt"
 
-with open("book.txt") as f:
-    for line in f:
+counts = {}
+with open(file_path) as handle:
+    for line in handle:
         for word in line.split():
             counts[word] = counts.get(word, 0) + 1
 
