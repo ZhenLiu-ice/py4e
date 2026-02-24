@@ -7,7 +7,8 @@ print(repr(min(s)))
 print(len(s))
 
 builtin_funcs = [
-    name for name in dir(builtins)
+    name
+    for name in dir(builtins)
     if inspect.isbuiltin(getattr(builtins, name)) and not name.startswith("_")
 ]
 
@@ -15,8 +16,7 @@ builtin_funcs = [
 max_len = max(len(name) for name in builtin_funcs)
 col_width = max_len + 2  # 加一些间距
 
-# 每行显示5列
-cols = 5
+cols = 5  # 每行显示5列
 for i, func in enumerate(sorted(builtin_funcs), start=1):
     print(func.ljust(col_width), end="")
     if i % cols == 0:
