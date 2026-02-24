@@ -12,6 +12,9 @@ builtin_funcs = [
     name for name in dir(builtins) if inspect.isbuiltin(getattr(builtins, name))
 ]
 
-# 按字母排序并打印
-for func in sorted(builtin_funcs):
-    print(func)
+for i, func in enumerate(sorted(builtin_funcs)):
+    if i % 9 !=0 and  not func.startswith("_"):
+        print(func, end='\t')
+    else:
+        print(func)
+print()
